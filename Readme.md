@@ -37,6 +37,11 @@ There are a set of rules to keep in mind:
     
     _Why:_
     >This way, you can make sure that code in master will almost always build without problems, and can be mostly used directly for releases.
+
+* Name your branch :  ```<jira id>-<branchname>```
+    
+    _Why:_
+    >This way, jira link the branch to the ticket.
     
 * Never push into `master` branch. Make a Pull Request.
     
@@ -77,7 +82,7 @@ Because of most of the reasons above, we use [Feature-branch-workflow](https://w
 
 * Checkout a new feature/bug-fix branch.
     ```sh
-    git checkout -b <branchname>
+    git checkout -b <jira id>-<branchname>
     ```
 * Make Changes.
     ```sh
@@ -98,7 +103,7 @@ Because of most of the reasons above, we use [Feature-branch-workflow](https://w
     
 * Update your feature branch with latest changes from develop by interactive rebase.
     ```sh
-    git checkout <branchname>
+    git checkout <jira id>-<branchname>
     git rebase -i --autosquash master
     ```
     
